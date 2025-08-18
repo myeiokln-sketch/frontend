@@ -1,0 +1,370 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Team Page Styles */
+.team-page {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333;
+  padding: 2rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.team-header-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.team-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a237e;
+  font-family: 'Inter', sans-serif;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.team-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  animation: slideInFromLeft 1.2s ease-out 0.2s;
+}
+
+/* Team Sections */
+.team-section {
+  margin-bottom: 4rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.team-category {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+  position: relative;
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.team-category::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 50px;
+  height: 3px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.team-category:hover::after {
+  width: 100px;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Team Card */
+.team-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  animation: floatBox 3s ease-in-out infinite, slideInFromBottom 0.8s ease-out forwards;
+  position: relative;
+  border: 1px solid rgba(30, 144, 255, 0.1);
+}
+
+.team-card:nth-child(1) {
+  animation-delay: 0s, 0.2s;
+}
+
+.team-card:nth-child(2) {
+  animation-delay: 0.5s, 0.4s;
+}
+
+.team-card:nth-child(3) {
+  animation-delay: 1s, 0.6s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #ffffff, #e3f2fd);
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #1a237e, #1976d2);
+  opacity: 0.8;
+}
+
+.team-card-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-card-image img {
+  transform: scale(1.05);
+}
+
+.team-social-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.team-card:hover .team-social-links {
+  opacity: 1;
+}
+
+.team-social-links a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+  transition: color 0.2s ease;
+}
+
+.team-social-links a:hover {
+  color: #3b82f6;
+}
+
+.team-card-content {
+  padding: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.team-card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+}
+
+.team-role {
+  color: #3b82f6;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+}
+
+.team-bio {
+  color: #6b7280;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+}
+
+/* Animations */
+@keyframes floatBox {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Accessibility */
+.team-card:focus-within {
+  outline: 2px solid #1a237e;
+  outline-offset: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .team-title {
+    font-size: 2.2rem;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    padding: 0 1.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .team-card-image {
+    height: 250px;
+  }
+  
+  .team-card-content {
+    padding: 1rem;
+  }
+  
+  .team-card-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .team-role {
+    font-size: 0.8rem;
+  }
+  
+  .team-bio {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-title {
+    font-size: 1.8rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .team-header-label {
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .team-subtitle {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .team-category {
+    font-size: 1.3rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-card-image {
+    height: 200px;
+  }
+  
+  .team-card-content {
+    padding: 0.75rem;
+  }
+  
+  .team-card-content h3 {
+    font-size: 1rem;
+  }
+  
+  .team-role {
+    font-size: 0.75rem;
+  }
+  
+  .team-bio {
+    font-size: 0.8rem;
+  }
+}
+
+.company-info h3 {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.company-info p {
+  letter-spacing: 0.1em;
+  text-align: justify;
+  hyphens: auto;
+  word-spacing: 0.1em;
+  font-family: 'Inter', sans-serif;
+}

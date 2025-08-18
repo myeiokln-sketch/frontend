@@ -1,0 +1,201 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Apply Inter font globally */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Project Details Page Styles */
+.project-details-page {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.project-category {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project-image-container {
+  flex: 1 1 40%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-info {
+  flex: 1 1 55%;
+  max-width: 100%;
+}
+
+.project-description h2,
+.project-features h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.features-list li::before {
+  content: "✔";
+  color: #1a237e;
+  margin-right: 0.5rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0d47a1;
+}
+
+.back-button svg {
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover svg {
+  transform: translateX(-3px);
+}
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1a237e;
+  padding: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .project-content {
+    flex-direction: column;
+  }
+  
+  .project-image-container,
+  .project-info {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-details-page {
+    padding: 1.5rem;
+  }
+
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .project-category {
+    font-size: 1rem;
+  }
+
+  .project-description h2,
+  .project-features h2 {
+    font-size: 1.3rem;
+  }
+
+  .project-description p {
+    font-size: 1rem;
+  }
+
+  .features-list li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-category {
+    font-size: 0.9rem;
+  }
+
+  .project-description h2,
+  .project-features h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-description p {
+    font-size: 0.95rem;
+  }
+
+  .features-list li {
+    font-size: 0.9rem;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+  }
+}

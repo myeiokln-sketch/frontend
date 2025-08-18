@@ -1,0 +1,181 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Apply Inter font globally */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Services Page Styles */
+.services-page1 {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333;
+}
+
+.services-container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.services-header1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-header-label1 {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.services-title1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a237e;
+}
+
+.services-subtitle1 {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Services Grid */
+.services-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card1 {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-image1 {
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card1:hover .service-image1 img {
+  transform: scale(1.05);
+}
+
+.service-content1 {
+  padding: 1.5rem;
+}
+
+.service-name1 {
+  font-size: 1.3rem;
+  color: #1a237e;
+  margin-bottom: 0.8rem;
+}
+
+.service-description1 {
+  color: #666;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: #1a237e;
+  border: 2px solid #1a237e;
+}
+
+.btn.secondary:hover {
+  background-color: #1a237e;
+  color: white;
+}
+
+.btn svg {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+.company-info1 h3 {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center; 
+}
+
+.company-info1 p {
+  letter-spacing: 0.1em;
+  text-align: justify; 
+  hyphens: auto; 
+  word-spacing: 0.1em; 
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .services-grid1 {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container1 {
+    padding: 1.5rem;
+  }
+  
+  .services-title1 {
+    font-size: 2rem;
+  }
+  
+  .services-subtitle1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .services-title1 {
+    font-size: 1.8rem;
+  }
+}

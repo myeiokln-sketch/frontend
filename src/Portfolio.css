@@ -1,0 +1,343 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Apply Inter font globally */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Portfolio Page Styles */
+.portfolio-page {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #333;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portfolio-header-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a237e;
+}
+
+.portfolio-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.portfolio-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #1a237e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.portfolio-content {
+  padding: 1.5rem;
+}
+
+.portfolio-content h3 {
+  font-size: 1.3rem;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-content p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: #e3f2fd;
+  color: #1a237e;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #1a237e;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.portfolio-link:hover {
+  color: #0d47a1;
+}
+
+.portfolio-link svg {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover svg {
+  transform: translateX(3px);
+}
+
+.company-info h3 {
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center; 
+}
+
+.company-info p {
+  letter-spacing: 0.1em;
+  text-align: justify; 
+  hyphens: auto; 
+  word-spacing: 0.1em; 
+}
+
+/* View Details Page Styles */
+.view-details-page {
+  background-color: #e6f0fa;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.view-details-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.view-details-back {
+  display: inline-block;
+  color: #1a237e;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.view-details-back:hover {
+  color: #0d47a1;
+}
+
+.view-details-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.5rem;
+}
+
+.view-details-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.view-details-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-details-overview {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.view-details-features {
+  list-style: none;
+  padding: 0;
+}
+
+.view-details-features li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.view-details-features li::before {
+  content: "✔";
+  color: #1a237e;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1.5rem;
+  }
+  
+  .portfolio-title {
+    font-size: 2rem;
+  }
+  
+  .portfolio-card {
+    max-width: 100%;
+  }
+
+  .view-details-page {
+    padding: 1.5rem;
+  }
+
+  .view-details-title {
+    font-size: 2rem;
+  }
+
+  .view-details-subtitle {
+    font-size: 1rem;
+  }
+
+  .view-details-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-header-label {
+    font-size: 0.8rem;
+  }
+  
+  .portfolio-title {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 1rem;
+  }
+  
+  .portfolio-image {
+    height: 180px;
+  }
+
+  .view-details-title {
+    font-size: 1.5rem;
+  }
+
+  .view-details-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .view-details-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .view-details-features li {
+    font-size: 0.9rem;
+  }
+}
+
+/* View Details Button Styles */
+.view-details {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a237e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.view-details:hover {
+  background-color: #0d47a1;
+  transform: translateY(-2px);
+}
+
+.view-details:active {
+  transform: translateY(0);
+}
