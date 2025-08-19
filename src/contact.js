@@ -69,7 +69,7 @@ const ContactPage = () => {
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_email: 'santhoshm90513@gmail.com'
+          to_email: 'moorthyn007@gmail.com'
         }),
       });
 
@@ -339,5 +339,6 @@ const ContactPage = () => {
     </div>
   );
 };
+
 
 export default ContactPage;
